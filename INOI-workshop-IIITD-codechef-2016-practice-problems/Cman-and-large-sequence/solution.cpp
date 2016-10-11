@@ -1,47 +1,23 @@
 
 #include <bits/stdc++.h>
-
-#define PI                    3.14159265359
-#define ff                    first
-#define ss                    second
-#define endl                  "\n"
-#define endln                 cout<<endl;
-#define pb                    push_back
-#define MOD                   1000000007
-#define INF                   INT_MAX
-#define fre(x,y)              for(int i=x;i<y;i++)
-#define fff(n)                fre(0,n)
-#define tt(t)                 while(t--)
-#define vi                    vector<int>
-#define sz(a)                 int((a).size())
-#define space                 " "
-#define all(x)                (x).begin(), (x).end()
-#define FILEIO                FILE* _1 = freopen("milk2.in", "r", stdin);FILE* _2 = freopen("milk2.out", "w", stdout);
-#define ll                    long long int
-
 using namespace std;
-bool cmp(pair<int,int> a, pair<int,int> b)
-{
-	if(a.second==b.second)return a.first>b.first;
-	return a.second>b.second;
-}
+
 int main() 
 {
  	ios::sync_with_stdio(false);
   	cin.tie(0);
-  	int n;
-  	cin>>n;
-  	vi v1(n);
-  	map<int,int> m;
-  	fff(n){cin>>v1[i];m[v1[i]]++;}
-  	vector< pair<int,int> > v(m.size());
-  	int cnt = 0;
-  	for(auto i= m.begin();i!=m.end();i++)
-  		v[cnt++] = *i;
-  	sort(all(v),cmp);
-  	fff(v.size())
-  	{
-  		
-  	}
-  	return 0;
+	
+	vector<long long int> a(100005), ans(100005);
+  	long long int i,j,n,m;
+    	cin>>n;
+    	for(i=0;i<n;i++)
+        	cin>>j,a[j]++;
+   	ans[0]=0;
+    	ans[1]=a[1];
+    	for(i=2;i<100001;i++)
+    	{
+        	ans[i]=max(ans[i-1],ans[i-2]+i*a[i]);
+    	}
+    	cout<<ans[100000];
+    	return 0;
 }
