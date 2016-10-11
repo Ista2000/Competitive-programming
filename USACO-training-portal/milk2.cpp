@@ -17,12 +17,7 @@ int main()
   	for(int i=1;i<n;i++)
   	{
   		if(v[i].first<=high)high = max(high,v[i].second);
-  		else
-     {
-      ans2 = max(ans2,v[i].first-high);
-      low = v[i].first;
-      high = v[i].second;
-     }
+  		else{ans2 = max(ans2,v[i].first-high);low = v[i].first;high = v[i].second;}
   		ans = max(ans,high-low);
   	}
   	cout<<ans<<" "<<ans2<<endl;
