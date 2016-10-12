@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<!-- saved from url=(0058)http://foobar.iiitd.edu.in/contest/team/problem.php?id=181 -->
+<html class="no-js" lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Induction Contest[1]</title>
+    <link rel="shortcut icon" href="http://foobar.iiitd.edu.in/favicon.png?v=2">
+    <link rel="stylesheet" href="./Problem_files/foundation.css">
+	<style>
+	.boxed {
+				padding: 20px 20px 20px;
+				 
+				border: 1px solid #d8d8d8;
+
+				 
+				-moz-border-radius: 4px;
+				-webkit-border-radius: 4px;
+				border-radius: 4px;
+				-moz-box-shadow: inset 0 0 0 1px #fff;
+				-webkit-box-shadow: inset 0 0 0 1px #fff;
+				box-shadow: inset 0 0 0 1px #fff; 
+			} 
+	</style>
+  </head>
+  <body>
+    
+   
+      <div class="row">
+        <div class="large-3 columns">
+		<h1>Induction Contest[1]</h1>
+          
+        </div>
+        <div class="large-9 columns">
+          <ul class="button-group right">
+            <!-- <li><a href="http://foobar.iiitd.edu.in/contest/team" class="button">Home</a></li> -->
+<!--
+            <li><a href="http://foobar.iiitd.edu.in/contest/public/problem.php?id=163" class="button">Problem 1</a></li>
+            <li><a href="http://foobar.iiitd.edu.in/contest/public/problem.php?id=164" class="button">Problem 2</a></li>
+            <li><a href="http://foobar.iiitd.edu.in/contest/public/problem.php?id=165" class="button">Problem 3</a></li>
+            <li><a href="http://foobar.iiitd.edu.in/contest/public/problem.php?id=166" class="button">Problem 4</a></li>
+            <li><a href="http://foobar.iiitd.edu.in/contest/public/problem.php?id=167" class="button">Problem 5</a></li>
+-->
+
+          </ul>
+        </div>
+      </div>
+     
+	 <div class="row">
+        <div class="large-12 columns">
+          <div align="center" class="row">
+		  
+            <h2><i>auckFmbar and Maths</i></h2>
+			<h3><strong>[MATH]</strong></h3>
+          </div>
+          <hr>
+        </div>
+      </div>
+	 
+      <div class="row">
+        <div class="large-12 columns">
+          <div class="row">
+            <div class="large-9 columns">
+              <p>By:<br>
+              <strong>Setter : Ashish Khatkar</strong><br>
+              <strong>Tester : Mohit Wadhwa</strong><br>
+              <!--<strong>Rohan Garg</strong> -->
+              </p>
+
+            </div>
+            <div align="right" class="large-3 columns">
+              <a href="http://foobar.iiitd.edu.in/contest/team">
+              <img src="./Problem_files/logo.png">
+              <br>FCP Home</a>
+            </div>
+          </div>
+          <hr>
+        </div>
+      </div>
+     
+      <div class="row">
+        <div class="large-12 columns">
+          <h4>Problem Statement</h4>
+     
+          <p>
+			  You are given two integers <b>N</b> and <b>D</b>. You have to find <b>N</b> positive integers such that the difference between their product and sum is <b>D</b>. The array of these <b>N</b> integers should be lexicographically smallest.
+          </p>
+          <p>
+			  For ex:<br>
+			  if N = 4 and D = 1<br>
+			  than these are two of the possible solutions:<br>
+			  A1 = [1, 1, 2, 5]<br>
+			  A2 = [1, 1, 5, 2]<br>
+			  We can see that A1 is lexicographically smaller than A2.
+          </p>
+     
+		
+        </div>
+      </div>
+	
+	  <div class="row">
+        <div class="large-12 columns">
+          <h4>Input</h4>
+          First line of input contains a single integer <b>T</b> denoting number of testcases.<br>
+          Next <b>T</b> lines contains two space separated integers <b>N</b> and <b>D</b>.
+
+     <hr>
+        </div>
+      </div>
+	  <div class="row">
+        <div class="large-12 columns">
+          <h4>Output</h4>
+          For each test case output <b>N</b> space separated integers.
+     <hr>
+        </div>
+      </div>
+     <div class="row">
+        <div class="large-12 columns">
+			<h4>Constraints</h4>
+			       
+            1 ≤ T ≤ 20<br>
+            2 ≤ N ≤ 1000<br>
+            0 ≤ D ≤ 1000
+			<hr>
+        </div>
+      </div>		
+       <div class="row">
+        <div class="large-12 columns">
+          <h4>Sample Input</h4>
+			<div class="large-6 columns boxed">
+			3<br>
+      2 1<br>
+      3 5<br>
+      4 1
+
+			</div>
+		<br>
+        </div>
+      </div>
+	  <div class="row">
+        <div class="large-12 columns">
+          <h4>Sample Output</h4>
+		<div class="large-6 columns boxed">
+			2 3<br>
+			1 2 8<br>
+			1 1 2 5
+
+
+		</div>
+		 
+     <br>
+
+      
+        </div>
+
+      </div>
+
+<!--
+      <div class="row">
+        <div class="large-12 columns">
+        <p><hr></p>
+      <h4>Explanation</h4>
+            <b>A * B</b> = 50 * 20 = 1000<br>
+              <b>(A * B) % (10<sup>9</sup> + 7)</b> = 1000 % (10<sup>9</sup> + 7) = 1000
+      
+        </div>
+      </div>
+-->
+
+      <div class="row">
+        <div class="large-12 columns">
+        <p></p><hr><p></p>
+      <h4>Time Limit: 1 second</h4>    
+      
+        </div>
+      </div>
+
+     
+      <footer class="row">
+        <div class="large-12 columns">
+          <hr>
+          <div class="row">
+            <div class="large-12 columns">
+              <p>© Copyright Foobar 2015.</p>
+            </div>
+            
+          </div>
+        </div>
+      </footer>
+  
+
+</body></html>
